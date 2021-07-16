@@ -23,4 +23,12 @@ public class Course {
     public String getCourseTitle() {
         return courseTitle;
     }
+
+    public void setCourseTitle(String courseTitle) {
+        this.courseTitle = courseTitle;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
+    }
 }

@@ -17,5 +17,17 @@ public class Workflow {
     public WorkflowStage getStage() {
         return stage;
     }
+
+    public void setStage(WorkflowStage stage) {
+        this.stage = stage;
+    }
+
+
+    public void changeCourseValues (Course course){
+        if (stage == com.swnat.WorkflowStage.CREATION){
+            subject = course;
+        }
+    }
+
 }
 
