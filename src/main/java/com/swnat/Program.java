@@ -25,4 +25,11 @@ public class Program {
    public List<Course> getCourses() {
         return courses;
    }
+
+   public boolean isEmpty() {
+       if (programTitle.isEmpty() && courses.isEmpty()){
+           return true;
+       }
+       return false;
+   }
 }

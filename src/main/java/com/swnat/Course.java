@@ -23,4 +23,11 @@ public class Course {
     public String getcourseTitle() {
         return courseTitle;
     }
+
+    public boolean isEmpty() {
+        if (courseCode.isEmpty() && courseTitle.isEmpty()){
+            return true;
+        }
+        return false;
+    }
 }
