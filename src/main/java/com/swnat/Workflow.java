@@ -24,10 +24,16 @@ public class Workflow {
 
 
     public void changeCourseValues (Course course){
-        if (stage == com.swnat.WorkflowStage.CREATION){
-            subject = course;
+        if (stage == WorkflowStage.CREATION){
+            subject.setCourseTitle(course.getCourseTitle());
+            subject.setCourseCode(course.getCourseCode());
         }
     }
 
+    public void advanceWorkflow() {
+        if (stage == WorkflowStage.CREATION){
+            stage = WorkflowStage.FEEDBACK;
+        }
+    }
 }
 
