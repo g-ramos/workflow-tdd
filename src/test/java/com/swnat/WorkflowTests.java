@@ -28,8 +28,7 @@ public class WorkflowTests {
         course.setCourseTitle("new title");
 
         workflow.changeCourseValues(course);
-        Assert.assertEquals(workflow.getSubject().getCourseCode(), "001");
-        Assert.assertEquals(workflow.getSubject().getCourseTitle(), "new title");
+        Assert.assertEquals(workflow.getSubject(), course);
 
     }
 

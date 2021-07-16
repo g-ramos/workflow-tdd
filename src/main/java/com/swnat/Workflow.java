@@ -25,8 +25,7 @@ public class Workflow {
 
     public void changeCourseValues (Course course){
         if (stage == WorkflowStage.CREATION){
-            subject.setCourseTitle(course.getCourseTitle());
-            subject.setCourseCode(course.getCourseCode());
+            subject = course;
         }
     }
 

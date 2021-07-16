@@ -2,5 +2,6 @@ package com.swnat;
 
 public enum WorkflowStage {
     CREATION,
-    FEEDBACK
+    FEEDBACK,
+    APPROVAL
 }
