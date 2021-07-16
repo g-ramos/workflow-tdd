@@ -11,4 +11,12 @@ public class CourseTests {
 
         Assert.assertEquals(course.getStatus(), CurriculumSubjectStatus.IN_DEVELOPMENT);
     }
+
+    @Test
+    public void courseStartsEmpty() {
+        Course course = new Course();
+
+        Assert.assertEquals(course.getcourseCode(),"");
+        Assert.assertEquals(course.getcourseTitle(),"");
+    }
 }
