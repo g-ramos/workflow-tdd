@@ -1,6 +1,6 @@
 package com.swnat;
 
-public class Course {
+public class Course implements WorkflowSubject{
 
     private String courseCode;
     private String courseTitle;
@@ -12,7 +12,15 @@ public class Course {
         this.courseStatus = CurriculumSubjectStatus.IN_DEVELOPMENT;
     }
 
+    public Course(String courseCode, String courseTitle, CurriculumSubjectStatus courseStatus) {
+        this.courseCode = courseCode;
+        this.courseTitle = courseTitle;
+        this.courseStatus = courseStatus;
+    }
+
     public CurriculumSubjectStatus getStatus() {
         return courseStatus;
     }
+
+
 }

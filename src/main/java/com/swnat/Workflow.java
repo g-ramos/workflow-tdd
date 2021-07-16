@@ -4,6 +4,10 @@ public class Workflow {
     private WorkflowStage stage;
     private WorkflowSubject subject;
 
+    public Workflow () {
+        stage = WorkflowStage.CREATION;
+    }
+
     public WorkflowStage getStage() {
         return stage;
     }

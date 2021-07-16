@@ -3,7 +3,7 @@ package com.swnat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Program {
+public class Program implements WorkflowSubject{
     private String programTitle;
     private CurriculumSubjectStatus programStatus;
     private List<Course> courses;
