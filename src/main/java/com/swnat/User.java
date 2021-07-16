@@ -7,4 +7,23 @@ public class User {
         return role;
     }
 
+    public User(UserRole role){
+        this.role=role;
+    }
+
+    public Workflow createWorkflow() throws IllegalStateException {
+        if (UserRole.DESIGNER.equals(role)) {
+            return new Workflow();
+        }
+        throw new IllegalStateException("Only users with role Designer can start a Workflow");
+    }
+
+    public Workflow changeWorkflowSubject(Workflow workflow, WorkflowSubject workflowSubject) throws IllegalStateException {
+        if (UserRole.DESIGNER.equals(role)) {
+            workflow.setSubject(workflowSubject);
+            return workflow;
+        }
+        throw new IllegalStateException("Only users with role Designer can change Workflow Subject");
+    }
+
 }
