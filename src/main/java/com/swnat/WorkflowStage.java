@@ -1,2 +1,5 @@
-package com.swnat;public class WorkflowStage {
+package com.swnat;
+
+public enum WorkflowStage {
+    CREATION
 }

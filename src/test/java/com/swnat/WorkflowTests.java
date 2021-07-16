@@ -10,4 +10,12 @@ public class WorkflowTests {
         Workflow workflow = new Workflow();
         Assert.assertEquals(workflow.getSubject().getStatus(), CurriculumSubjectStatus.IN_DEVELOPMENT);
     }
+
+
+    @Test
+    public void workflowIsInCreation() {
+        Workflow workflow = new Workflow();
+        Assert.assertEquals(workflow.getStage(), WorkflowStage.CREATION);
+    }
+
 }
