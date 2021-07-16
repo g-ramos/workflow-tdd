@@ -17,4 +17,12 @@ public class Program {
     public CurriculumSubjectStatus getStatus() {
         return programStatus;
     }
+
+    public String getProgramTitle() {
+        return programTitle;
+    }
+
+   public List<Course> getCourses() {
+        return courses;
+   }
 }

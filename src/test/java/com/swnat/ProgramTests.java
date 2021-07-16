@@ -11,4 +11,13 @@ public class ProgramTests {
 
         Assert.assertEquals(program.getStatus(), CurriculumSubjectStatus.IN_DEVELOPMENT);
     }
+
+    @Test
+    public void programStartEmpty() {
+        Program program = new Program();
+
+        Assert.assertEquals(program.getProgramTitle(), "");
+        Assert.assertTrue(program.getCourses().isEmpty());
+
+    }
 }
