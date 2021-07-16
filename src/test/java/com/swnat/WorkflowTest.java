@@ -43,4 +43,22 @@ public class WorkflowTest {
 
         Assert.assertEquals(workflow.getStage(),WorkflowStage.FEEDBACK);
     }
+
+    @Test
+    public void cancelWorkflow(){
+        Workflow workflow = new Workflow();
+
+        workflow.cancel();
+
+        Assert.assertTrue(workflow.isDeleted());
+    }
+
+    @Test(expectedExceptions = IllegalStateException.class)
+    public void cantCancelIfNotInFirstStage(){
+        Workflow workflow = new Workflow();
+        workflow.setStage(WorkflowStage.FEEDBACK);
+
+        workflow.cancel();
+
+    }
 }

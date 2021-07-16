@@ -33,4 +33,12 @@ public class User {
         workflow.submit();
         return workflow;
     }
+
+    public boolean cancelWorkflow(Workflow workflow) throws IllegalStateException {
+        if (!UserRole.DESIGNER.equals(role)) {
+            throw new IllegalStateException("Only users with role Designer can submit a Workflow");
+        }
+        return workflow.cancel();
+
+    }
 }

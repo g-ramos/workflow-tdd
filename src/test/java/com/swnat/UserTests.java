@@ -60,4 +60,23 @@ public class UserTests {
         Workflow submittedWorkflow = user.submitWorkflow(workflow);
 
     }
+
+    @Test
+    public void designerCanCancelWorkflow(){
+        User user = new User(UserRole.DESIGNER);
+        Workflow workflow = new Workflow();
+
+        boolean result = user.cancelWorkflow(workflow);
+
+        Assert.assertTrue(result);
+
+    }
+
+    @Test(expectedExceptions = IllegalStateException.class)
+    public void onlyDesignerCanCancelWorkflow() {
+        User user = new User(UserRole.REVIEWER);
+        Workflow workflow = new Workflow();
+
+        boolean result = user.cancelWorkflow(workflow);
+    }
 }

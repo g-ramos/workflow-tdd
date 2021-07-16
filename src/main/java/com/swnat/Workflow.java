@@ -3,6 +3,7 @@ package com.swnat;
 public class Workflow {
     private WorkflowStage stage;
     private WorkflowSubject subject;
+    private boolean deleted = false;
 
     public Workflow () {
         stage = WorkflowStage.CREATION;
@@ -31,5 +32,18 @@ public class Workflow {
         if(WorkflowStage.CREATION.equals(stage)){
             stage=WorkflowStage.FEEDBACK;
         }
+    }
+    
+    public boolean isDeleted(){
+        return deleted;
+    }
+
+    public boolean cancel() throws IllegalStateException {
+        if(!WorkflowStage.CREATION.equals(stage)){
+            throw new IllegalStateException();
+        }
+        deleted = true;
+
+        return deleted;
     }
 }
