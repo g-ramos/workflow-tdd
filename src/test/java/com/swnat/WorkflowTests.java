@@ -12,4 +12,12 @@ public class WorkflowTests {
         Assert.assertEquals(courseWorkflow.getStage(), CurriculumWorkflowStage.CREATION_STAGE);
 
     }
+
+    @Test
+    public void programWorkflowStartAtFirstStageAndTheSubjectIsEmpty() {
+        Workflow courseWorkflow = new Workflow("Program");
+
+        Assert.assertEquals(courseWorkflow.getStage(), CurriculumWorkflowStage.CREATION_STAGE);
+
+    }
 }
