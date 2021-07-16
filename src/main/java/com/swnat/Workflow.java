@@ -34,5 +34,11 @@ public class Workflow {
             stage = WorkflowStage.FEEDBACK;
         }
     }
+
+    public void cancelWorkflow() {
+        if (stage == WorkflowStage.CREATION) {
+            stage = WorkflowStage.CANCELED;
+        }
+    }
 }
 
