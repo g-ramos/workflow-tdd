@@ -15,4 +15,12 @@ public class Course {
     public CurriculumSubjectStatus getStatus() {
         return courseStatus;
     }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public String getCourseTitle() {
+        return courseTitle;
+    }
 }
