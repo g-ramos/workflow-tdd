@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class WorkflowTests {
 
     @Test
-    public void subjectIsEmptyWhenCreatingWorkflow() {
+    public void subjectIsInDevelopmentWhenCreatingWorkflow() {
         Workflow workflow = new Workflow();
         Assert.assertEquals(workflow.getSubject().getStatus(), CurriculumSubjectStatus.IN_DEVELOPMENT);
     }
