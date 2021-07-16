@@ -34,4 +34,13 @@ public class WorkflowTest {
 
         workflow.setSubject(wotWorkflowSubject);
     }
+
+    @Test
+    public void advanceWorkflowToFeedback(){
+        Workflow workflow = new Workflow();
+
+        workflow.submit();
+
+        Assert.assertEquals(workflow.getStage(),WorkflowStage.FEEDBACK);
+    }
 }

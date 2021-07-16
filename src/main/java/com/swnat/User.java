@@ -26,4 +26,11 @@ public class User {
         throw new IllegalStateException("Only users with role Designer can change Workflow Subject");
     }
 
+    public Workflow submitWorkflow(Workflow workflow) throws IllegalStateException{
+        if (!UserRole.DESIGNER.equals(role)) {
+            throw new IllegalStateException("Only users with role Designer can submit a Workflow");
+        }
+        workflow.submit();
+        return workflow;
+    }
 }

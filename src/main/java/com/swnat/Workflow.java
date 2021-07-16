@@ -26,4 +26,10 @@ public class Workflow {
         }
         this.subject = subject;
     }
+
+    public void submit() {
+        if(WorkflowStage.CREATION.equals(stage)){
+            stage=WorkflowStage.FEEDBACK;
+        }
+    }
 }

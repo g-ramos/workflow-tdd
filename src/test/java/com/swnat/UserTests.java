@@ -42,4 +42,22 @@ public class UserTests {
 
     }
 
+    @Test
+    public void designerCanSubmitWorkflow(){
+        User user = new User(UserRole.DESIGNER);
+        Workflow workflow = new Workflow();
+
+        Workflow submittedWorkflow = user.submitWorkflow(workflow);
+
+        Assert.assertEquals(submittedWorkflow.getStage(),WorkflowStage.FEEDBACK);
+    }
+
+    @Test(expectedExceptions = IllegalStateException.class)
+    public void onlyDesignerCanSubmitWorkflow(){
+        User user = new User(UserRole.REVIEWER);
+        Workflow workflow = new Workflow();
+
+        Workflow submittedWorkflow = user.submitWorkflow(workflow);
+
+    }
 }
