@@ -20,4 +20,13 @@ public class WorkflowTests {
         Assert.assertEquals(programWorkflow.getStage(), CurriculumWorkflowStage.CREATION_STAGE);
         Assert.assertTrue(programWorkflow.getProgramSubject().isEmpty());
     }
+
+    @Test
+    public void userCanEditCourseWorkflowAtFirstStage() {
+        Workflow courseWorkflow = new Workflow(WorkflowType.COURSE);
+        User user = new User(CurriculumRole.DESIGNER);
+
+        Assert.assertEquals(courseWorkflow.getStage(), CurriculumWorkflowStage.CREATION_STAGE);
+        Assert.assertTrue(user.canEdit(courseWorkflow));
+    }
 }
