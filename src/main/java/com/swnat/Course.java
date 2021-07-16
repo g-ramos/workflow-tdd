@@ -1,8 +1,7 @@
 package com.swnat;
 
 public class Course implements WorkflowSubject{
-
-    private String courseCode;
+        private String courseCode;
     private String courseTitle;
     private CurriculumSubjectStatus courseStatus;
 
@@ -22,5 +21,11 @@ public class Course implements WorkflowSubject{
         return courseStatus;
     }
 
+    public String getCourseCode() {
+        return courseCode;
+    }
 
+    public String getCourseTitle() {
+        return courseTitle;
+    }
 }

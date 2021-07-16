@@ -20,7 +20,10 @@ public class Workflow {
         return subject;
     }
 
-    public void setSubject(WorkflowSubject subject) {
+    public void setSubject(WorkflowSubject subject) throws IllegalStateException{
+        if (!WorkflowStage.CREATION.equals(this.stage)) {
+            throw new IllegalStateException ("Only Workflows In Creation can be updated");
+        }
         this.subject = subject;
     }
 }
