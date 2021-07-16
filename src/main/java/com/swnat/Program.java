@@ -13,4 +13,8 @@ public class Program {
         this.courses = new ArrayList<>();
         this.programStatus = CurriculumSubjectStatus.IN_DEVELOPMENT;
     }
+
+    public CurriculumSubjectStatus getStatus() {
+        return programStatus;
+    }
 }
