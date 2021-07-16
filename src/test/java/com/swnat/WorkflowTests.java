@@ -7,7 +7,7 @@ public class WorkflowTests {
 
     @Test
     public void courseWorkflowStartAtFirstStageAndTheSubjectIsEmpty() {
-        Workflow courseWorkflow = new Workflow("Course");
+        Workflow courseWorkflow = new Workflow(WorkflowType.COURSE);
 
         Assert.assertEquals(courseWorkflow.getStage(), CurriculumWorkflowStage.CREATION_STAGE);
 
@@ -15,9 +15,9 @@ public class WorkflowTests {
 
     @Test
     public void programWorkflowStartAtFirstStageAndTheSubjectIsEmpty() {
-        Workflow courseWorkflow = new Workflow("Program");
+        Workflow programWorkflow = new Workflow(WorkflowType.PROGRAM);
 
-        Assert.assertEquals(courseWorkflow.getStage(), CurriculumWorkflowStage.CREATION_STAGE);
+        Assert.assertEquals(programWorkflow.getStage(), CurriculumWorkflowStage.CREATION_STAGE);
 
     }
 }
