@@ -8,7 +8,7 @@ public class WorkflowTests {
     @Test
     public void subjectIsEmptyWhenCreatingWorkflow() {
         Workflow workflow = new Workflow();
-
-        Assert.assertEquals(workflow.getSubject(), null);
+        Course courseToCompare = new Course();
+        Assert.assertEquals(workflow.getSubject().getStatus(), courseToCompare.getStatus());
     }
 }
